@@ -13,7 +13,7 @@ const NavBar: React.FC = () => {
     const theme = useTheme();
 
     return (
-        <Box sx={{ display: 'flex', justifyContent: 'center', mt: 2 }}>
+        <Box sx={{ display: 'flex', justifyContent: 'center', mt: 2, position: 'sticky', top: 10, zIndex: 1000 }}>
             <Box
                 sx={{
                     display: 'flex',
