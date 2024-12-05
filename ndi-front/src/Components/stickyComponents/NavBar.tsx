@@ -55,7 +55,7 @@ const NavBar: React.FC = () => {
                     />
                     <BottomNavigationAction
                         value="/learn"
-                        icon={<LightbulbIcon sx={{ transition: 'all 0.2s', fontSize: value === '/learn' ? 30 : 24, color: value === '/search' ? theme.palette.text.secondary : "#fff" }} />}
+                        icon={<LightbulbIcon sx={{ transition: 'all 0.2s', fontSize: value === '/learn' ? 30 : 24, color: value === '/learn' ? theme.palette.text.secondary : "#fff" }} />}
                         component={Link}
                         to="/learn"
                         sx={{
@@ -71,7 +71,7 @@ const NavBar: React.FC = () => {
                     />
                     <BottomNavigationAction
                         value="/about"
-                        icon={<HelpIcon sx={{ transition: 'all 0.2s', fontSize: value === '/about' ? 30 : 24, color: value === '/profile' ? theme.palette.text.secondary : "#fff" }} />}
+                        icon={<HelpIcon sx={{ transition: 'all 0.2s', fontSize: value === '/about' ? 30 : 24, color: value === '/about' ? theme.palette.text.secondary : "#fff" }} />}
                         component={Link}
                         to="/about"
                         sx={{
