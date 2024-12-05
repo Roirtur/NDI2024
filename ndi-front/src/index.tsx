@@ -14,7 +14,7 @@ const root = ReactDOM.createRoot(document.getElementById('root')!);
 root.render(
   <React.StrictMode>
     <ThemeContextProvider>
-      <Router basename="/NDI2024">
+      <Router>
         <Box
           sx={{
             display: 'flex',
