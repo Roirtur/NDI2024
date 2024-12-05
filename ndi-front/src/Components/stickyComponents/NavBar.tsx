@@ -54,10 +54,10 @@ const NavBar: React.FC = () => {
                         }}
                     />
                     <BottomNavigationAction
-                        value="/search"
-                        icon={<LightbulbIcon sx={{ transition: 'all 0.2s', fontSize: value === '/search' ? 30 : 24, color: value === '/search' ? theme.palette.text.secondary : "#fff" }} />}
+                        value="/learn"
+                        icon={<LightbulbIcon sx={{ transition: 'all 0.2s', fontSize: value === '/learn' ? 30 : 24, color: value === '/search' ? theme.palette.text.secondary : "#fff" }} />}
                         component={Link}
-                        to="/search"
+                        to="/learn"
                         sx={{
                             minWidth: 'auto',
                             maxWidth: 56,
@@ -70,10 +70,10 @@ const NavBar: React.FC = () => {
                         }}
                     />
                     <BottomNavigationAction
-                        value="/profile"
-                        icon={<HelpIcon sx={{ transition: 'all 0.2s', fontSize: value === '/profile' ? 30 : 24, color: value === '/profile' ? theme.palette.text.secondary : "#fff" }} />}
+                        value="/about"
+                        icon={<HelpIcon sx={{ transition: 'all 0.2s', fontSize: value === '/about' ? 30 : 24, color: value === '/profile' ? theme.palette.text.secondary : "#fff" }} />}
                         component={Link}
-                        to="/profile"
+                        to="/about"
                         sx={{
                             minWidth: 'auto',
                             maxWidth: 56,

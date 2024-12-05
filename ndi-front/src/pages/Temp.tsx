@@ -1,7 +1,9 @@
+import { Box } from '@mui/material';
 import React from 'react';
 
 const TMP: React.FC = () => {
-    return <div>TMP Page</div>;
+    return <Box sx={{ height: '200vh' }}
+    >Temp Page</Box>;
 };
 
 export default TMP;

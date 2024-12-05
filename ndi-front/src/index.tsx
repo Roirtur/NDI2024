@@ -4,7 +4,8 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import NavBar from './Components/stickyComponents/NavBar';
 import Footer from './Components/stickyComponents/Footer';
 import Home from './pages/Home';
-import Search from './pages/About';
+import Learn from './pages/Learn';
+import TMP from './pages/Temp';
 import { ThemeContextProvider } from './Contexts/ThemeContext';
 import { Box } from '@mui/material';
 
@@ -23,8 +24,8 @@ root.render(
           <NavBar />
           <Routes>
             <Route path="/home" element={<Home />} />
-            <Route path="/search" element={<Search />} />
-            <Route path="/profile" element={<Search />} />
+            <Route path="/learn" element={<Learn />} />
+            <Route path="/about" element={<TMP />} />
           </Routes>
           <Footer />
         </Box>
