@@ -39,8 +39,11 @@ const OceanBodyModel: React.FC = () => {
     const [selectedPart, setSelectedPart] = useState<string | null>(null);
 
     const bodyPartsInfo: Record<string, string> = {
-        coeur: "Le cœur représente les courants marins, comme la circulation thermohaline, qui agit comme une pompe régulant les températures globales.",
+        cerveau: "Le cerveau représente les courants marins, qui régulent les températures globales et influencent les climats.",
         poumons: "Les poumons illustrent les échanges gazeux océaniques, notamment la photosynthèse marine qui transforme le CO2 en oxygène.",
+        bouche: "La bouche représente les estuaires et les zones côtières où les nutriments sont absorbés.",
+        veines: "Les veines symbolisent les courants océaniques qui transportent les nutriments et l'énergie à travers le globe.",
+        yeux: "Les yeux représentent la clarté de l'eau et la visibilité sous-marine, essentielle pour la vie marine.",
         estomac: "L'estomac est lié au cycle des nutriments dans l'océan, où les éléments essentiels sont redistribués dans les écosystèmes.",
     };
 
@@ -64,12 +67,12 @@ const OceanBodyModel: React.FC = () => {
                 viewBox="0 0 200 500"
                 aria-label="Modèle du Corps-Océan"
             >
-                {/* Cœur */}
-                <Tooltip title="Cœur" placement="top">
+                {/* Cerveau */}
+                <Tooltip title="Cerveau" placement="top">
                     <path
                         className="body-part"
-                        d="M90 120 C85 110, 115 110, 110 120 S95 140, 90 120 Z"
-                        onClick={() => handleOpen('coeur')}
+                        d="M90 50 C85 40, 115 40, 110 50 S95 70, 90 50 Z"
+                        onClick={() => handleOpen('cerveau')}
                     />
                 </Tooltip>
 
@@ -89,11 +92,45 @@ const OceanBodyModel: React.FC = () => {
                     </g>
                 </Tooltip>
 
+                {/* Bouche */}
+                <Tooltip title="Bouche" placement="top">
+                    <path
+                        className="body-part"
+                        d="M90 100 C85 95, 115 95, 110 100 S95 110, 90 100 Z"
+                        onClick={() => handleOpen('bouche')}
+                    />
+                </Tooltip>
+
+                {/* Veines */}
+                <Tooltip title="Veines" placement="top">
+                    <path
+                        className="body-part"
+                        d="M90 200 C85 190, 115 190, 110 200 S95 220, 90 200 Z"
+                        onClick={() => handleOpen('veines')}
+                    />
+                </Tooltip>
+
+                {/* Yeux */}
+                <Tooltip title="Yeux" placement="top">
+                    <g>
+                        <path
+                            className="body-part"
+                            d="M70 80 C65 75, 80 60, 90 80 Z"
+                            onClick={() => handleOpen('yeux')}
+                        />
+                        <path
+                            className="body-part"
+                            d="M110 80 C115 75, 100 60, 90 80 Z"
+                            onClick={() => handleOpen('yeux')}
+                        />
+                    </g>
+                </Tooltip>
+
                 {/* Estomac */}
                 <Tooltip title="Estomac" placement="top">
                     <path
                         className="body-part"
-                        d="M85 200 C80 220, 100 220, 95 200 Z"
+                        d="M85 250 C80 270, 100 270, 95 250 Z"
                         onClick={() => handleOpen('estomac')}
                     />
                 </Tooltip>

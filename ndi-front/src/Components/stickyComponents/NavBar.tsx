@@ -1,45 +1,61 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { BottomNavigation, BottomNavigationAction } from '@mui/material';
 import HomeIcon from '@mui/icons-material/Home';
 import LightbulbIcon from '@mui/icons-material/Lightbulb';
 import HelpIcon from '@mui/icons-material/Help';
 import { Link, useLocation } from 'react-router-dom';
-import { Box, useTheme } from '@mui/material';
+import { Box, useTheme, useMediaQuery } from '@mui/material';
 import ThemeToggle from '../ThemesHandlers/ThemeToggleButton';
 
 const NavBar: React.FC = () => {
+    const theme = useTheme();
     const location = useLocation();
     const [value, setValue] = React.useState(location.pathname);
-    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
-    useEffect(() => {
+    React.useEffect(() => {
         setValue(location.pathname);
     }, [location.pathname]);
 
     return (
-        <Box sx={{ display: 'flex', justifyContent: 'center', mt: 2, position: 'sticky', top: 10, zIndex: 1000 }}>
+        <Box sx={{ display: 'flex', justifyContent: 'center', mt: isMobile ? 0 : 2, position: 'sticky', top: isMobile ? 0 : 10, zIndex: 1000 }}>
             <Box
                 sx={{
                     display: 'flex',
                     alignItems: 'center',
-                    width: '80%',
+                    width: '100%',
                     maxWidth: 600,
                     bgcolor: 'background.paper',
-                    borderRadius: 2,
+                    borderRadius: isMobile ? 0 : 2,
                     boxShadow: 3,
+                    flexDirection: isMobile ? 'column' : 'row',
+                    padding: isMobile ? 1 : 0,
                 }}
             >
-                <Box sx={{ ml: 2, display: 'flex', alignItems: 'center', height: '100%' }}>
-                    <Link to="/home" style={{ display: 'flex', alignItems: 'center', height: '100%' }}>
-                        <img src="/wave.png" alt="Logo" style={{ height: 40 }} />
-                    </Link>
-                </Box>
+                {!isMobile && (
+                    <Box sx={{ ml: 2, display: 'flex', alignItems: 'center', height: '100%' }}>
+                        <Link to="/home" style={{ display: 'flex', alignItems: 'center', height: '100%' }}>
+                            <img src="/wave.png" alt="Logo" style={{ height: 40 }} />
+                        </Link>
+                    </Box>
+                )}
+                {isMobile && (
+                    <Box sx={{
+                        position: "absolute",
+                        top: "25%",
+                        left: 25,
+                    }}>
+                        <Link to="/home" style={{ display: 'flex', alignItems: 'center', height: '100%' }}>
+                            <img src="/wave.png" alt="Logo" style={{ height: 40 }} />
+                        </Link>
+                    </Box>
+                )}
                 <BottomNavigation
                     value={value}
                     onChange={(event, newValue) => {
                         setValue(newValue);
                     }}
-                    sx={{ flexGrow: 1 }}
+                    sx={{ flexGrow: 1, flexDirection: 'row' }}
                 >
                     <BottomNavigationAction
                         value="/home"
@@ -89,9 +105,21 @@ const NavBar: React.FC = () => {
                         }}
                     />
                 </BottomNavigation>
-                <Box sx={{ display: 'flex', alignItems: 'center', ml: 2 }}>
-                    <ThemeToggle />
-                </Box>
+                {!isMobile && (
+                    <Box sx={{ display: 'flex', alignItems: 'center', ml: 2 }}>
+                        <ThemeToggle />
+                    </Box>
+                )}
+                {isMobile && (
+                    <Box sx={{
+                        position: "absolute",
+                        bottom: "25%",
+                        right: 0,
+
+                    }}>
+                        <ThemeToggle />
+                    </Box>
+                )}
             </Box>
         </Box>
     );
