@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BottomNavigation, BottomNavigationAction } from '@mui/material';
 import HomeIcon from '@mui/icons-material/Home';
 import LightbulbIcon from '@mui/icons-material/Lightbulb';
@@ -11,6 +11,10 @@ const NavBar: React.FC = () => {
     const location = useLocation();
     const [value, setValue] = React.useState(location.pathname);
     const theme = useTheme();
+
+    useEffect(() => {
+        setValue(location.pathname);
+    }, [location.pathname]);
 
     return (
         <Box sx={{ display: 'flex', justifyContent: 'center', mt: 2, position: 'sticky', top: 10, zIndex: 1000 }}>
@@ -25,9 +29,9 @@ const NavBar: React.FC = () => {
                     boxShadow: 3,
                 }}
             >
-                <Box sx={{ ml: 2 }}>
-                    <Link to="/home">
-                        <img src="/path/to/logo.png" alt="Logo" style={{ height: 40 }} />
+                <Box sx={{ ml: 2, display: 'flex', alignItems: 'center', height: '100%' }}>
+                    <Link to="/home" style={{ display: 'flex', alignItems: 'center', height: '100%' }}>
+                        <img src="/wave.png" alt="Logo" style={{ height: 40 }} />
                     </Link>
                 </Box>
                 <BottomNavigation
@@ -45,7 +49,7 @@ const NavBar: React.FC = () => {
                         sx={{
                             minWidth: 'auto',
                             maxWidth: 56,
-                            mr: 4, 
+                            mr: 4,
                             transition: 'all 0.2s',
                             '&:hover': {
                                 color: theme.palette.primary.main,

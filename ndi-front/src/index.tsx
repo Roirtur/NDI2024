@@ -23,13 +23,20 @@ root.render(
             minHeight: '100vh',
           }}>
           <NavBar />
-          <Routes>
-            <Route path="/" element={<Navigate to="/home" />} />
-            <Route path="/home" element={<Home />} />
-            <Route path="/learn" element={<Learn />} />
-            <Route path="/about" element={<TMP />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
+          <Box sx={{
+            maxWidth: "80vw",
+            margin: 'auto',
+            flexGrow: 1,
+            padding: 2,
+          }}>
+            <Routes>
+              <Route path="/" element={<Navigate to="/home" />} />
+              <Route path="/home" element={<Home />} />
+              <Route path="/learn" element={<Learn />} />
+              <Route path="/about" element={<TMP />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </Box>
           <Footer />
         </Box>
       </Router>
