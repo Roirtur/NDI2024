@@ -3,6 +3,7 @@ import { Box, Typography, Grid, Button, Card, CardContent, useTheme } from '@mui
 import { Link } from 'react-router-dom';
 import { styled } from '@mui/material/styles';
 import { useMediaQuery } from '@mui/material';
+import LightbulbIcon from '@mui/icons-material/Lightbulb';
 
 const StyledContainer = styled(Box)(({ theme }) => ({
     padding: theme.spacing(4),
@@ -100,7 +101,12 @@ const Home: React.FC = () => {
                         color="primary"
                         size="large"
                     >
-                        Explorer les Détails
+                        Explorer
+                        <LightbulbIcon sx={{
+                            fontSize: 20,
+                            transform: 'translateY(-1px)',
+                            marginLeft: theme.spacing(1),
+                        }} />
                     </Button>
                 </Box>
             </Box>
