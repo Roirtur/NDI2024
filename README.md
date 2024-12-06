@@ -1,4 +1,4 @@
-### Brain Waves
+# Brain Waves
 
 Ce projet est disponible en ligne via l'url suivante [Brain Waves](https://profound-sopapillas-72e32b.netlify.app/home).
 
@@ -19,9 +19,3 @@ Brain Waves est une application web interactive qui explore les parallèles entr
 - **Material-UI** : Framework React pour des composants d'interface utilisateur stylisés.
 - **Chart.js** : Bibliothèque JavaScript pour la visualisation de données.
 - **Date-fns** : Bibliothèque JavaScript pour la manipulation des dates.
-
-## Installation et démarrage
-
-Pour installer et démarrer le projet en local, suivez les étapes ci-dessous :
-
-1. Clonez le dépôt :
