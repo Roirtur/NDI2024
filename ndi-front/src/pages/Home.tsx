@@ -2,7 +2,6 @@ import React from 'react';
 import { Box, Typography, Grid, Button, Card, CardContent, useTheme } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { styled } from '@mui/material/styles';
-import OceanBodyModel from '../Components/OceanBodyModel';
 
 const StyledContainer = styled(Box)(({ theme }) => ({
     padding: theme.spacing(4),
