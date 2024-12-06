@@ -11,3 +11,33 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #A0C4FF;
+  /* Slightly darker blue background */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #5A9BD6;
+  /* Darker blue thumb */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #345B8C;
+  /* Even darker blue on hover */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #5A9BD6 #A0C4FF;
+  /* Darker blue thumb and slightly darker blue background */
+}

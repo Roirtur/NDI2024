@@ -9,12 +9,15 @@ import About from './pages/About';
 import NotFound from './pages/NotFound';
 import { ThemeContextProvider } from './Contexts/ThemeContext';
 import { Box } from '@mui/material';
+import CssBaseline from '@mui/material/CssBaseline';
+import './index.css'; // Import the custom scrollbar CSS
 
 const root = ReactDOM.createRoot(document.getElementById('root')!);
 
 root.render(
   <React.StrictMode>
     <ThemeContextProvider>
+      <CssBaseline />
       <Router>
         <Box
           sx={{
@@ -34,5 +37,5 @@ root.render(
         <Footer />
       </Router>
     </ThemeContextProvider>
-  </React.StrictMode >
+  </React.StrictMode>
 );
