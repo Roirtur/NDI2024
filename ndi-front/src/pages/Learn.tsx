@@ -15,9 +15,6 @@ const Learn: React.FC = () => {
                 <Typography variant="h4" gutterBottom textAlign="center">
                     Explorez les Parallèles
                 </Typography>
-                <Typography variant="body1" color="textSecondary" textAlign="center" mb={4}>
-                    Cliquez sur différentes parties du corps humain pour explorer leur rôle dans l’océan.
-                </Typography>
                 <OceanBodyModel />
             </Box>
         </StyledContainer>

@@ -59,7 +59,13 @@ const NavBar: React.FC = () => {
                 >
                     <BottomNavigationAction
                         value="/home"
-                        icon={<HomeIcon sx={{ transition: 'all 0.2s', fontSize: value === '/home' ? 30 : 24, color: value === '/home' ? theme.palette.text.secondary : "#fff" }} />}
+                        icon={<HomeIcon sx={{
+                            transition: 'all 0.2s', fontSize: value === '/home' ? 30 : 24, color: value === '/home' ? theme.palette.text.secondary : "#fff",
+                            '&:hover': {
+                                color: theme.palette.primary.main,
+                                transform: 'scale(1.1)',
+                            },
+                        }} />}
                         component={Link}
                         to="/home"
                         sx={{
@@ -67,15 +73,17 @@ const NavBar: React.FC = () => {
                             maxWidth: 56,
                             mr: 4,
                             transition: 'all 0.2s',
-                            '&:hover': {
-                                color: theme.palette.primary.main,
-                                transform: 'scale(1.1)',
-                            },
                         }}
                     />
                     <BottomNavigationAction
                         value="/learn"
-                        icon={<LightbulbIcon sx={{ transition: 'all 0.2s', fontSize: value === '/learn' ? 30 : 24, color: value === '/learn' ? theme.palette.text.secondary : "#fff" }} />}
+                        icon={<LightbulbIcon sx={{
+                            transition: 'all 0.2s', fontSize: value === '/learn' ? 30 : 24, color: value === '/learn' ? theme.palette.text.secondary : "#fff",
+                            '&:hover': {
+                                color: theme.palette.primary.main,
+                                transform: 'scale(1.1)',
+                            },
+                        }} />}
                         component={Link}
                         to="/learn"
                         sx={{
@@ -83,25 +91,23 @@ const NavBar: React.FC = () => {
                             maxWidth: 56,
                             mr: 4,
                             transition: 'all 0.2s',
-                            '&:hover': {
-                                color: theme.palette.primary.main,
-                                transform: 'scale(1.1)',
-                            },
                         }}
                     />
                     <BottomNavigationAction
                         value="/about"
-                        icon={<HelpIcon sx={{ transition: 'all 0.2s', fontSize: value === '/about' ? 30 : 24, color: value === '/about' ? theme.palette.text.secondary : "#fff" }} />}
+                        icon={<HelpIcon sx={{
+                            transition: 'all 0.2s', fontSize: value === '/about' ? 30 : 24, color: value === '/about' ? theme.palette.text.secondary : "#fff",
+                            '&:hover': {
+                                color: theme.palette.primary.main,
+                                transform: 'scale(1.1)',
+                            },
+                        }} />}
                         component={Link}
                         to="/about"
                         sx={{
                             minWidth: 'auto',
                             maxWidth: 56,
                             transition: 'all 0.2s',
-                            '&:hover': {
-                                color: theme.palette.primary.main,
-                                transform: 'scale(1.1)',
-                            },
                         }}
                     />
                 </BottomNavigation>
