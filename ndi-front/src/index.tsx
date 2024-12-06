@@ -5,7 +5,7 @@ import NavBar from './Components/stickyComponents/NavBar';
 import Footer from './Components/stickyComponents/Footer';
 import Home from './pages/Home';
 import Learn from './pages/Learn';
-import TMP from './pages/Temp';
+import About from './pages/About';
 import NotFound from './pages/NotFound';
 import { ThemeContextProvider } from './Contexts/ThemeContext';
 import { Box } from '@mui/material';
@@ -27,7 +27,7 @@ root.render(
             <Route path="/" element={<Navigate to="/home" />} />
             <Route path="/home" element={<Home />} />
             <Route path="/learn" element={<Learn />} />
-            <Route path="/about" element={<TMP />} />
+            <Route path="/about" element={<About />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Box>
